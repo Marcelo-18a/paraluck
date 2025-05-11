@@ -1,0 +1,25 @@
+.valorant-container {
+  display: flex;
+  align-items: center; /* alinha verticalmente ao centro */
+  gap: 10px; /* espaço entre texto e imagem, opcional */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  footer {
+    background-color: #161616;
+    width: 100%;
+    margin-top: auto;
+  }
+  
