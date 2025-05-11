@@ -1,27 +1,31 @@
-import  Sequelize from "sequelize";
+import Sequelize from "sequelize";
 import connection from "../config/sequelize-config.js";
 
 const Usuarios = connection.define("usuarios", {
-  Nome_Usuario: {
-      type: Sequelize.STRING,
-      allowNull: false,
+  ID_Usuario: {
+    type: Sequelize.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
   },
-  Idade_Usuario:{
-      type: Sequelize.INTEGER,
-      allowNull: false,
+  Nome_Usuario: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  Idade_Usuario: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
   },
   Data_Nascimento_Usuario: {
-      type: Sequelize.DATE,
-      allowNull: false,
+    type: Sequelize.DATE,
+    allowNull: false,
   },
   Perfil_Acesso: {
-      type: Sequelize.STRING,
-      allowNull: false
+    type: Sequelize.STRING,
+    allowNull: false
   },
-  Ativacao_Usuarios: {
-      type: Sequelize.BOOLEAN,
-      allowNull: false,
-  }
-})
-Usuarios.sync({foece: false})
+}, {
+  timestamps: false,          
+  freezeTableName: true
+});
+
 export default Usuarios;

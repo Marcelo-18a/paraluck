@@ -1,13 +1,15 @@
 // Importando dependências
 import express from "express";
-import LojaProd from "./controllers/usuariosControll.js"; // Supondo que você tenha essa rota
+import unidadesControll from "./controllers/unidadeControll.js";
+import usuariosControll from "./controllers/usuariosControll.js"; // Supondo que você tenha essa rota
 import connection from "./config/sequelize-config.js";
 
 // Inicializando o app Express
 const app = express();
 
 // Conectando ao banco de dados
-connection.authenticate()
+connection
+  .authenticate()
   .then(() => {
     console.log("✅ Conexão com o banco realizada com sucesso!");
   })
@@ -16,7 +18,8 @@ connection.authenticate()
   });
 
 // (Opcional) Criar banco se não existir — CUIDADO: só funciona em MySQL se você já estiver conectado com permissão para isso.
-connection.query(`CREATE DATABASE IF NOT EXISTS cristalbd`)
+connection
+  .query(`CREATE DATABASE IF NOT EXISTS cristalbd`)
   .then(() => {
     console.log("✅ Banco de dados verificado/criado com sucesso.");
   })
@@ -31,7 +34,9 @@ app.use(express.json()); // Para ler JSON
 app.use(express.static("public")); // Arquivos estáticos (CSS, JS, imagens)
 
 // Definindo rotas
-app.use("/", LojaProd); // Inclui as rotas de /emails_unidade, etc.
+app.use("/", usuariosControll);
+app.use("/", unidadesControll);
+// Inclui as rotas de /emails_unidade, etc.
 
 // Rota inicial
 app.get("/", (req, res) => {

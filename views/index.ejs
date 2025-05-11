@@ -1,8 +1,33 @@
-<%- include ('partials/navbar.ejs')%> <%- include ('partials/header.ejs')%>
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+<main>
+    <section class="hero">
+        <h1>        
+            TRANSFORME DADOS <br />
+            EM RELACIONAMENTOS <br />
+            <span class="destaque">DURADOUROS</span>
+        </h1>
+    </section>
 
-<h1 id="" style="text-align: center; font-family: valorant; margin-top: 350px;" ;>
-  Bem-vindo ao melhor site de Skin!
-</h1>
+    <section class="barra-botoes">
+        <a href="evasao.html" class="botao-funcional">
+            <img src="img/Vector.png" alt="Previsão de Evasão">
+            <span>PREVISÃO DE EVASÃO</span>
+        </a>
+        <a href="painel.html" class="botao-funcional">
+            <img src="img/Vector (1).png" alt="Painel de Controle">
+            <span>PAINEL DE CONTROLE</span>
+        </a>
+        <a href="vendas.html" class="botao-funcional">
+            <img src="img/Vector (2).png" alt="Vendas Inteligentes">
+            <span>VENDAS INTELIGENTES</span>
+        </a>
+    </section>
 
-
-<%- include ('partials/footer.ejs')%>
+    <section class="icones">
+        <div class="imagem-central">
+            <img src="/img/meio.png" alt="Imagem central" />
+        </div>
+    </section>
+</main>
+<%- include ('partials/footer.ejs') %>

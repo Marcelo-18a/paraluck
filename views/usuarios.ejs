@@ -1,0 +1,27 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+<h1>Lista de Usuários</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Data de Nascimento</th>
+      <th>Perfil de Acesso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% usuarios.forEach(function(usuario) { %>
+      <tr>
+          <td><%= usuario.Nome_Usuario %></td>
+          <td><%= usuario.Idade_Usuario %></td>
+          <td><%= new Date(usuario.Data_Nascimento_Usuario).toLocaleDateString() %></td>
+          <td><%= usuario.Perfil_Acesso %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    
+    <%- include ('partials/footer.ejs') %>
