@@ -1,6 +1,11 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/navbar.ejs') %>
 <link rel="stylesheet" href="/css/cadastro.css">
+<!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+
 <div class="wrapper">
 
       <div class="container" id="container">
@@ -29,7 +34,8 @@
           </div>
           <div class="form-group">
             <label for="Area_Atuacao">Data de Nascimento</label>
-            <input id="Area_Atuacao" name="Data_Nascimento_Usuario" type="text" required />
+            <input id="Data_Nascimento_Usuario" name="Data_Nascimento_Usuario" type="text" required />
+
           </div>
         </div>
       
@@ -85,5 +91,20 @@
     container.classList.remove('register-mode');
   });
 </script>
+<!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<!-- Locale PT -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+<script>
+ flatpickr("#Data_Nascimento_Usuario", {
+  dateFormat: "Y-m-d",
+  maxDate: "today",
+  altInput: true,
+  altFormat: "d/m/Y",
+  locale: "pt",      // usa o pt
+});
+
+</script>
+
 
 <%- include ('partials/footer.ejs') %>

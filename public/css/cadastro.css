@@ -206,3 +206,99 @@ nav button {
   margin-left: 10px;
 }
 
+/* Flatpickr dark theme overrides */
+.flatpickr-calendar {
+  background: #0d1117 !important;
+  border: 1px solid #30363d !important;
+  color: #c9d1d9 !important;
+}
+
+.flatpickr-months,
+.flatpickr-weekdays {
+  background-color: #161b22 !important;
+  color: #c9d1d9 !important;
+}
+
+.flatpickr-weekday {
+  color: #8b949e !important;
+}
+
+.flatpickr-day {
+  background: transparent !important;
+  color: #c9d1d9 !important;
+  border-radius: 4px !important;
+}
+
+.flatpickr-day:hover {
+  background: #30363d !important;
+}
+
+.flatpickr-day.today {
+  border-color: #58a6ff !important;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.selected:focus {
+  background: #238636 !important;
+  color: #ffffff !important;
+}
+
+.flatpickr-day.disabled,
+.flatpickr-day.disabled:hover {
+  color: #6e7681 !important;
+  background: transparent !important;
+}
+
+/* ajustar cor do mês e ano no cabeçalho */
+.flatpickr-current-month,
+.flatpickr-current-month .cur-month,
+.flatpickr-current-month .numInputWrapper input,
+.flatpickr-current-month .numInputWrapper span {
+  color: #ffffff !important;
+}
+
+/* ajustar cor dos botões de navegação (setas) */
+.flatpickr-prev-month,
+.flatpickr-next-month,
+.flatpickr-prev-month svg,
+.flatpickr-next-month svg {
+  fill: #ffffff !important;
+}
+
+/* Meses no seletor de mês em preto */
+.flatpickr-monthSelect-month {
+  color: #000 !important;
+  background-color: #000;
+}
+
+/* Cabeçalho do seletor de mês (Título "Mês" e ano) */
+.flatpickr-monthSelect-trigger,
+.flatpickr-monthSelect-month:hover {
+  color: #000 !important;
+  
+}
+
+/* Estilo para o dropdown de meses (quando clica em "Fevereiro", por exemplo) */
+.flatpickr-monthDropdown-months {
+  background-color: #0d1117 !important;
+  color: #ffffff !important;
+  border: 1px solid #30363d;
+}
+
+/* Estilo para cada item da lista de meses */
+.flatpickr-monthDropdown-months option {
+  background-color: #0d1117 !important;
+  color: #ffffff !important;
+}
+
+/* Quando um item da lista está selecionado */
+.flatpickr-monthDropdown-months option:checked {
+  background-color: #1f6feb !important;
+  color: #ffffff !important;
+}
+
+
+
+
+
+
