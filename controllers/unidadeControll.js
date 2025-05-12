@@ -22,7 +22,6 @@ router.post("/unidades/cadastrar", (req, res) => {
     Nome_unidade,
     Area_Atuacao,
     CNPJ_Unidade,
-    telefone,
     Rua,
     Bairro,
     Numero,

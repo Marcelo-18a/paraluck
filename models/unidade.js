@@ -49,5 +49,5 @@ const Unidades = connection.define("unidades", {
   freezeTableName: true
 });
 
-
+Unidades.sync({foece: false})
 export default Unidades;

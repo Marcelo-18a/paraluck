@@ -27,5 +27,5 @@ const Usuarios = connection.define("usuarios", {
   timestamps: false,          
   freezeTableName: true
 });
-
+Usuarios.sync({foece: false})
 export default Usuarios;

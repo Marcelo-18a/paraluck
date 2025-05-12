@@ -17,4 +17,21 @@ router.get("/usuarios", function (req, res) {
     });
 });
 
+router.get("/usuarios/delete/:id", (req, res) => {
+  const id = req.params.id;
+
+  Usuarios.destroy({
+    where: {
+      ID_Usuario: id
+    }
+  })
+  .then(() => {
+    res.redirect("/usuarios"); // redireciona após deletar
+  })
+  .catch((err) => {
+    console.error("Erro ao deletar usuário:", err);
+    res.status(500).send("Erro ao tentar excluir o usuário.");
+  });
+});
+
 export default router;
