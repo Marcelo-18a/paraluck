@@ -1,7 +1,7 @@
 // Importando dependências
 import express from "express";
-import unidadesControll from "./controllers/unidadeControll.js";
-import usuariosControll from "./controllers/usuariosControll.js"; // Supondo que você tenha essa rota
+import cadUsuariosControll from "./controllers/cadUsuariosControll.js";
+import usuariosControll from "./controllers/usuariosControll.js";
 import connection from "./config/sequelize-config.js";
 
 // Inicializando o app Express
@@ -33,9 +33,14 @@ app.use(express.urlencoded({ extended: true })); // Para ler formulários
 app.use(express.json()); // Para ler JSON
 app.use(express.static("public")); // Arquivos estáticos (CSS, JS, imagens)
 
+// 🔁 Redirecionamento de /unidades para /usuariosCadastro
+app.get("/unidades", (req, res) => {
+  res.redirect("/usuariosCadastro");
+});
+
 // Definindo rotas
 app.use("/", usuariosControll);
-app.use("/", unidadesControll);
+app.use("/", cadUsuariosControll);
 
 // Rota inicial
 app.get("/", (req, res) => {
@@ -51,3 +56,4 @@ app.listen(port, (err) => {
     console.log(`🚀 Servidor rodando em http://localhost:${port}`);
   }
 });
+
