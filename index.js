@@ -36,7 +36,6 @@ app.use(express.static("public")); // Arquivos estáticos (CSS, JS, imagens)
 // Definindo rotas
 app.use("/", usuariosControll);
 app.use("/", unidadesControll);
-// Inclui as rotas de /emails_unidade, etc.
 
 // Rota inicial
 app.get("/", (req, res) => {

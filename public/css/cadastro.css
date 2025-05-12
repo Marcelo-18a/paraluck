@@ -16,14 +16,14 @@
     justify-content: center;
   }
   
-  .container {
+  /* .container {
     background: #fff;
     border-radius: 10px;
     padding: 30px;
     max-width: 600px;
     width: 100%;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
+  } */
   
   h1 {
     text-align: center;
